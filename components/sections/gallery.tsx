@@ -23,11 +23,11 @@ export function GallerySection({ isVisible, setSectionRef, enlargedPhoto, setEnl
 
   return (
     <>
-      <section id="gallery" ref={(element) => setSectionRef("gallery", element)} style={{ background: "radial-gradient(ellipse at 50% 30%, #0F0F0F 0%, #050505 60%, #080808 100%)" }} className={`pt-20 pb-20 transition-[transform,opacity] duration-500 sm:pt-28 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+      <section id="results" ref={(element) => setSectionRef("results", element)} style={{ background: "radial-gradient(ellipse at 50% 30%, #0F0F0F 0%, #050505 60%, #080808 100%)" }} className={`pt-20 pb-20 transition-[transform,opacity] duration-500 sm:pt-28 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 px-4 text-left lg:px-0 lg:text-center">
-            <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl lg:text-center">I Nostri Momenti</h2>
-            <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Istantanee di passione, dedizione e gioia</p>
+            <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl lg:text-center">Real Results</h2>
+            <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Natural-looking enhancements, built to last.</p>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
             {featuredGalleryPhotos.length > 0

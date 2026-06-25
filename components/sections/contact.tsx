@@ -6,7 +6,7 @@ import { type Dispatch, type ReactNode, type SetStateAction, useState } from "re
 
 import { brand } from "@/lib/site-config"
 
-const courseOptions = ["Gioco Danza", "Danza Classica", "Danza Moderna", "Danza Contemporanea", "Pas de Deux", "Storia della Danza", "Pilates"]
+const courseOptions = ["Microblading", "Lip Blush", "Permanent Eyeliner", "Not sure yet — I'd like a consultation"]
 
 type ContactSectionProps = {
   isVisible: boolean
@@ -34,14 +34,14 @@ export function ContactSection({ isVisible, setSectionRef, formSubmitted, setFor
   }
 
   return (
-    <section id="contatti" ref={(element) => setSectionRef("contatti", element)} style={{ background: "radial-gradient(ellipse at 30% 70%, #141414 0%, #0F0F0F 55%, #0A0A0A 100%)" }} className={`relative border-t border-border bg-[#050505] transition-[transform,opacity] duration-500 ${courseDropdownOpen ? "z-[10000]" : "z-10"} ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+    <section id="contact" ref={(element) => setSectionRef("contact", element)} style={{ background: "radial-gradient(ellipse at 30% 70%, #141414 0%, #0F0F0F 55%, #0A0A0A 100%)" }} className={`relative border-t border-border bg-[#050505] transition-[transform,opacity] duration-500 ${courseDropdownOpen ? "z-[10000]" : "z-10"} ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
       <div className="relative overflow-hidden py-24">
         <Image src="/contactformimage.jpg" alt="" fill quality={56} sizes="100vw" className="pointer-events-none object-cover object-center opacity-55" style={{ maskImage: "linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.2) 100%)" }} aria-hidden="true" />
         <div className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.85) 75%, #050505 100%)" }} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 px-4 text-left lg:px-0 lg:text-center">
-            <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl md:text-6xl lg:text-center">Vuoi provare un corso?</h2>
-            <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Scrivici e ti aiutiamo a scegliere il percorso più adatto a te al Centro Danza. Ti rispondiamo con orari, disponibilità e prossimi passi per iniziare.</p>
+            <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl md:text-6xl lg:text-center">Book Your Appointment</h2>
+            <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Fill out the form below and we&apos;ll get back to you within 24 hours to confirm your booking.</p>
           </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {formSubmitted ? (
@@ -51,8 +51,8 @@ export function ContactSection({ isVisible, setSectionRef, formSubmitted, setFor
                     <path d="M8 16L14 22L24 10" stroke="#C0152A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="animate-draw-check" />
                   </svg>
                 </div>
-                <p className="font-sans text-lg text-primary">Grazie! Il tuo messaggio è stato inviato. Ti risponderemo al più presto.</p>
-                <button onClick={() => setFormSubmitted(false)} className="mt-4 cursor-pointer font-sans text-sm text-muted-foreground underline">Invia un altro messaggio</button>
+                <p className="font-sans text-lg text-primary">Thank you! Your request has been sent. We&apos;ll get back to you within 24 hours.</p>
+                <button onClick={() => setFormSubmitted(false)} className="mt-4 cursor-pointer font-sans text-sm text-muted-foreground underline">Send another request</button>
               </div>
             ) : (
               <form className="space-y-6" action="https://formspree.io/f/mqengdqy" method="POST" onSubmit={async (event) => {
@@ -83,17 +83,17 @@ export function ContactSection({ isVisible, setSectionRef, formSubmitted, setFor
                 }
               }}>
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <TextInput id="name" name="nome" label="Nome" placeholder=" " hasError={formErrors.nome} isValid={fieldValid.nome} setFormErrors={setFormErrors} onValidate={validateField} />
-                  <TextInput id="email" name="email" label="Email" placeholder=" " type="email" hasError={formErrors.email} isValid={fieldValid.email} setFormErrors={setFormErrors} onValidate={validateField} />
+                  <TextInput id="name" name="nome" label="Full Name" placeholder=" " hasError={formErrors.nome} isValid={fieldValid.nome} setFormErrors={setFormErrors} onValidate={validateField} />
+                  <TextInput id="email" name="email" label="Email Address" placeholder=" " type="email" hasError={formErrors.email} isValid={fieldValid.email} setFormErrors={setFormErrors} onValidate={validateField} />
                 </div>
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <TextInput id="phone" name="telefono" label="Telefono" placeholder=" " type="tel" hasError={formErrors.telefono} isValid={fieldValid.telefono} setFormErrors={setFormErrors} onValidate={validateField} />
+                  <TextInput id="phone" name="telefono" label="Phone Number" placeholder=" " type="tel" hasError={formErrors.telefono} isValid={fieldValid.telefono} setFormErrors={setFormErrors} onValidate={validateField} />
                   <div>
-                    <label htmlFor="course" className="mb-2 block text-[12px] font-semibold tracking-wider text-white uppercase">Corso di Interesse</label>
+                    <label htmlFor="course" className="mb-2 block text-[12px] font-semibold tracking-wider text-white uppercase">Service of Interest</label>
                     <div className="relative z-[10010]" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setCourseDropdownOpen(false) }}>
                       <input type="hidden" name="corso" value={selectedCourse} />
                       <button id="course" type="button" className="flex w-full items-center justify-between rounded-xl bg-[#0A0A0A] px-4 py-3 text-left text-white shadow-[0_12px_32px_rgba(0,0,0,0.32)] transition-[border-color,box-shadow] hover:border-[#D4AF37]/40 focus:border-[rgba(212,175,55,0.75)] focus:shadow-[0_0_0_3px_rgba(212,175,55,0.12),0_12px_32px_rgba(0,0,0,0.32)] focus:outline-none" style={{ border: `1px solid ${formErrors.corso ? "var(--template-error)" : "rgba(212,175,55,0.25)"}` }} onClick={() => { setCourseDropdownOpen((open) => !open); setFormErrors((previous) => ({ ...previous, corso: false })) }} aria-haspopup="listbox" aria-expanded={courseDropdownOpen}>
-                        <span className={selectedCourse ? "text-white" : "text-white/60"}>{selectedCourse || "Seleziona un'opzione"}</span>
+                        <span className={selectedCourse ? "text-white" : "text-white/60"}>{selectedCourse || "Select an option"}</span>
                         <ChevronDown size={16} className={`ml-3 shrink-0 text-[#D4AF37] transition-transform ${courseDropdownOpen ? "rotate-180" : ""}`} />
                       </button>
                       {courseDropdownOpen && (
@@ -110,13 +110,14 @@ export function ContactSection({ isVisible, setSectionRef, formSubmitted, setFor
                 </div>
                 <div className="floating-label-group">
                   <textarea id="message" name="messaggio" rows={4} className="w-full resize-none rounded-xl border bg-[#0A0A0A] px-4 py-3 text-white shadow-[0_12px_32px_rgba(0,0,0,0.28)] transition-[border-color,box-shadow] placeholder:text-transparent focus:border-[rgba(212,175,55,0.75)] focus:shadow-[0_0_0_3px_rgba(212,175,55,0.12),0_12px_32px_rgba(0,0,0,0.28)] focus:outline-none" style={{ borderColor: "rgba(212,175,55,0.25)" }} placeholder=" " />
-                  <label htmlFor="message">Messaggio</label>
+                  <label htmlFor="message">Message / Notes (optional)</label>
                 </div>
-                <button type="submit" className="w-full cursor-pointer rounded-full bg-primary py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:bg-[#A93226] hover:shadow-primary/35 active:translate-y-0 active:scale-[0.99]">Invia Messaggio</button>
+                <button type="submit" className="w-full cursor-pointer rounded-full bg-primary py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:bg-[#A93226] hover:shadow-primary/35 active:translate-y-0 active:scale-[0.99]">Request Appointment</button>
+                <p className="text-center text-sm text-white/60">We&apos;ll get back to you within 24 hours. Your information is never shared.</p>
                 <a href={brand.whatsappHref} target="_blank" rel="noopener noreferrer" className="flex w-full items-center justify-center gap-2 rounded-full border border-[#25D366] bg-[#25D366] py-4 text-lg font-bold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:-translate-y-0.5 hover:bg-[#1DB954] hover:shadow-[#25D366]/35 active:translate-y-0 active:scale-[0.99]">
-                  <MessageCircle size={20} /> Scrivici su WhatsApp
+                  <MessageCircle size={20} /> Message us on WhatsApp
                 </a>
-                {formNetworkError && <p className="mt-3 font-sans text-sm text-[var(--template-error)]">Si è verificato un errore. Riprova o scrivici direttamente.</p>}
+                {formNetworkError && <p className="mt-3 font-sans text-sm text-[var(--template-error)]">Something went wrong. Please try again or contact us directly.</p>}
               </form>
             )}
             <div className="space-y-8">
