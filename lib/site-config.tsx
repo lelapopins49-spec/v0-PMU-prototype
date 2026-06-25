@@ -1,11 +1,5 @@
 import {
-  Calendar,
-  CalendarRange,
-  Crown,
   Flame,
-  Tag,
-  Ticket,
-  Users,
   Wind,
   Zap,
   type LucideIcon,
@@ -18,7 +12,7 @@ export type NavLink = {
 
 export type Course = {
   title: string
-  age: string
+  cta: string
   description: string
   image: string
   Icon: LucideIcon
@@ -82,26 +76,26 @@ export const stats = [
 
 export const courseCategories: CourseCategory[] = [
   {
-    label: "Dance",
+    label: "Services",
     courses: [
       {
-        title: "Danza Classica",
-        age: "Tutti i livelli",
-        description: "Tecnica, postura e disciplina per costruire basi solide nella danza classica.",
+        title: "Microblading",
+        cta: "Book Microblading",
+        description: "Hair-stroke technique that fills and defines your brows with precision. Ideal for sparse, over-plucked, or uneven brows. Heals in 4–6 weeks.",
         image: "/imperial ballet/danzaclassica.jpg",
         Icon: Zap,
       },
       {
-        title: "Danza Classica per Bambini",
-        age: "Tutti i livelli",
-        description: "Un percorso pensato per avvicinare i più piccoli alla danza classica attraverso tecnica, musicalità e gioco.",
+        title: "Lip Blush",
+        cta: "Book Lip Blush",
+        description: "A soft wash of pigment that enhances your lip shape, adds color, and gives the illusion of fuller lips — no filler needed. Heals in 4–6 weeks.",
         image: "/imperial ballet/danzaclassicaperbambini.jpg",
         Icon: Flame,
       },
       {
-        title: "Pilates",
-        age: "Tutti i livelli",
-        description: "Allenamento controllato per postura, tonificazione, stabilità e consapevolezza corporea.",
+        title: "Permanent Eyeliner",
+        cta: "Book Eyeliner",
+        description: "Smudge-proof, sweat-proof liner that defines your eyes morning to night. Available in lash-line enhancement or classic liner styles.",
         image: "/imperial ballet/pilates.jpg",
         Icon: Wind,
       },
@@ -258,13 +252,7 @@ export const scheduleContactInfo = {
 }
 
 export const pricingCards = [
-  { Icon: Ticket, title: "Lezione Singola", description: "Ideale per provare un corso prima di iscriverti. Nessun impegno, massima flessibilità." },
-  { Icon: Calendar, title: "Abbonamento Mensile", description: "La soluzione più flessibile per chi vuole ballare con regolarità ogni mese." },
-  { Icon: CalendarRange, title: "Abbonamento Semestrale", description: "Sei mesi di lezioni con un risparmio rispetto all'abbonamento mensile." },
-  { Icon: Crown, title: "Abbonamento Annuale", description: "La scelta di chi vuole dare continuità al proprio percorso artistico. Massimo risparmio." },
-]
-
-export const pricingHighlights = [
-  { Icon: Tag, title: "Tariffe Differenziate", description: "I costi variano in base al corso scelto e all'età dell'allievo. Contattaci per ricevere il preventivo personalizzato." },
-  { Icon: Users, title: "Sconti Famiglia", description: "Sono previste riduzioni speciali per fratelli e/o sorelle e per mamme e figlie che si iscrivono insieme." },
+  { title: "Microblading", price: "$[PRICE]", note: "Includes 1 touch-up session" },
+  { title: "Lip Blush", price: "$[PRICE]", note: "Includes 1 touch-up session" },
+  { title: "Permanent Eyeliner", price: "$[PRICE]", note: "Includes 1 touch-up session" },
 ]

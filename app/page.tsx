@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/sections/contact"
 import { CtaBanner } from "@/components/sections/cta"
 import { GallerySection } from "@/components/sections/gallery"
 import { HeroSection } from "@/components/sections/hero"
-import { PricingSection, ScheduleSection } from "@/components/sections/schedule-pricing"
+import { PricingSection } from "@/components/sections/schedule-pricing"
 import { TestimonialsSection } from "@/components/sections/testimonials"
 import { FloatingActions } from "@/components/site/floating-actions"
 import { Footer } from "@/components/site/footer"
@@ -83,10 +83,9 @@ export default function DanceStudioTemplate() {
       <Navigation navLinks={navLinks} activeSection={activeSection} isScrolled={isScrolled} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <HeroSection />
       <AboutSection isVisible={visibleSections.has("chi-siamo")} setSectionRef={setSectionRef} bioOpen={bioOpen} setBioOpen={setBioOpen} />
-      <ClassesSection isVisible={visibleSections.has("corsi")} setSectionRef={setSectionRef} coursesExpanded={coursesExpanded} setCoursesExpanded={setCoursesExpanded} />
-      <CtaBanner eyebrow="Scopri il percorso pi&ugrave; adatto a te o a tuo figlio." text="La prima lezione &egrave; gratuita &mdash; vieni a trovarci" buttonLabel="Prenota Ora" />
-      <ScheduleSection isVisible={visibleSections.has("orari")} setSectionRef={setSectionRef} />
-      <PricingSection isVisible={visibleSections.has("prezzi")} setSectionRef={setSectionRef} />
+      <ClassesSection isVisible={visibleSections.has("services")} setSectionRef={setSectionRef} coursesExpanded={coursesExpanded} setCoursesExpanded={setCoursesExpanded} />
+      <CtaBanner heading="Ready to Feel Confident Every Morning?" text="Permanent makeup is safe, long-lasting, and completely personalized to you. Whether you want to wake up with perfect brows, a hint of lip color, or defined eyes — we've got you covered." primaryLabel="Book Your Free Consultation" secondaryLabel="Book an Appointment" />
+      <PricingSection isVisible={visibleSections.has("pricing")} setSectionRef={setSectionRef} />
       <GallerySection isVisible={visibleSections.has("gallery")} setSectionRef={setSectionRef} enlargedPhoto={enlargedPhoto} setEnlargedPhoto={setEnlargedPhoto} />
       <TestimonialsSection />
       <ContactSection isVisible={visibleSections.has("contatti")} setSectionRef={setSectionRef} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} formErrors={formErrors} setFormErrors={setFormErrors} formNetworkError={formNetworkError} setFormNetworkError={setFormNetworkError} />
