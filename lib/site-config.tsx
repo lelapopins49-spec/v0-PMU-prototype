@@ -45,9 +45,9 @@ export type TeamMember = {
 }
 
 export const brand = {
-  name: "Centro Danza",
-  shortName: "Centro Danza",
-  tagline: "di Marco Protano e Martina Libro",
+  name: "[BRAND NAME]",
+  shortName: "[BRAND NAME]",
+  tagline: "Permanent Makeup Studio",
   logo: "",
   phone: "+39 329 862 4075",
   phoneHref: "tel:+393298624075",
@@ -66,12 +66,11 @@ export const brand = {
 }
 
 export const navLinks: NavLink[] = [
-  { href: "#chi-siamo", label: "Chi Siamo" },
-  { href: "#corsi", label: "Corsi" },
-  { href: "#orari", label: "Orari" },
-  { href: "#prezzi", label: "Prezzi" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contatti", label: "Contatti" },
+  { href: "#services", label: "Services" },
+  { href: "#results", label: "Results" },
+  { href: "#about", label: "About" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#contact", label: "Contact" },
 ]
 
 export const stats = [
