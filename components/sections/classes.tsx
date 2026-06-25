@@ -33,11 +33,10 @@ function CourseCard({ course, isHiddenOnMobile }: {
         )}
       </div>
       <div>
-        <div className="mb-3 inline-block rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">{course.age}</div>
         <h3 className="mb-3 font-serif text-2xl font-bold text-foreground">{course.title}</h3>
         <p className="mb-4 text-pretty text-muted-foreground">{course.description}</p>
-        <a href="#contatti" className="inline-flex items-center font-medium text-primary transition-colors hover:text-primary/80">
-          Richiedi Info <ChevronRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+        <a href="#contact" className="inline-flex items-center font-medium text-primary transition-colors hover:text-primary/80">
+          {course.cta} <ChevronRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
     </div>
@@ -47,15 +46,15 @@ function CourseCard({ course, isHiddenOnMobile }: {
 export function ClassesSection({ isVisible, setSectionRef, coursesExpanded, setCoursesExpanded }: ClassesSectionProps) {
   return (
     <section
-      id="corsi"
-      ref={(element) => { setSectionRef("corsi", element) }}
+      id="services"
+      ref={(element) => { setSectionRef("services", element) }}
       style={{ background: "radial-gradient(ellipse at 80% 20%, #0F0F0F 0%, #080808 60%, #050505 100%)" }}
       className={`py-20 transition-[transform,opacity] duration-500 sm:py-28 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 px-4 text-left lg:px-0 lg:text-center">
-          <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl lg:text-center">I Nostri Corsi</h2>
-          <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Dalla danza classica al movimento contemporaneo, offriamo un percorso completo per ogni età e livello</p>
+          <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl lg:text-center">Our Services</h2>
+          <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">Each treatment is customized to your features and skin tone for results that look natural — never overdone.</p>
         </div>
         {courseCategories.map((category, categoryIndex) => {
           const previousCoursesCount = courseCategories.slice(0, categoryIndex).reduce((count, item) => count + item.courses.length, 0)

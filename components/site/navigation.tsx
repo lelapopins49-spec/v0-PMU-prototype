@@ -35,7 +35,7 @@ export function Navigation({ navLinks, activeSection, isScrolled, mobileMenuOpen
         <div className={`fixed top-0 left-0 right-0 z-[60] border-b border-[#D4AF37]/30 transition-all duration-400 ${announcementFading ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`} style={{ background: "linear-gradient(90deg, #1A0A0A 0%, #2A0E1A 50%, #1A0A0A 100%)" }}>
           <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-2 sm:px-6 lg:px-8">
             <Sparkles size={14} className="text-[#D4AF37]" />
-            <span className="text-center text-xs font-medium tracking-wide text-white/80 sm:text-sm">La prima lezione &egrave; gratuita &mdash; vieni a provare senza impegno</span>
+            <span className="text-center text-xs font-medium tracking-wide text-white/80 sm:text-sm">Your first consultation is free &mdash; book today with no obligation</span>
             <button onClick={dismissAnnouncement} className="ml-2 text-white/40 transition-colors hover:text-white/80" aria-label="Dismiss"><X size={14} /></button>
           </div>
         </div>
@@ -52,7 +52,7 @@ export function Navigation({ navLinks, activeSection, isScrolled, mobileMenuOpen
               <div className="flex items-center gap-7">
                 {navLinks.map((link) => (<a key={link.href} href={link.href} className={`relative py-2 text-[12px] font-semibold tracking-[0.16em] uppercase transition-all duration-300 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-white after:transition-all after:duration-300 ${activeSection === link.href.slice(1) ? "text-[#F5F5F5] after:w-full after:opacity-80" : "text-[#F5F5F5]/62 after:w-0 after:opacity-0 hover:text-[#F5F5F5] hover:after:w-full hover:after:opacity-55"}`}>{link.label}</a>))}
               </div>
-              <a href="#contatti" className="rounded-full border-2 border-white px-6 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-[#0F0F0F]">Iscriviti Ora</a>
+              <a href="#contact" className="rounded-full border-2 border-white px-6 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-[#0F0F0F]">Book Now</a>
             </div>
             <button className="z-[9520] rounded-full border border-[#C0152A]/30 bg-[#0F0F0F] p-2 text-[#F5F5F5] shadow-lg shadow-black/40 transition-colors duration-300 hover:border-[#C0152A]/60 lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">{mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}</button>
           </div>
@@ -66,7 +66,7 @@ export function Navigation({ navLinks, activeSection, isScrolled, mobileMenuOpen
             </div>
             <div className="relative flex flex-col gap-2.5">
               {navLinks.map((link) => (<a key={link.href} href={link.href} className="group flex min-h-14 items-center justify-between rounded-xl border border-white/15 bg-[#1A1A1A]/88 px-4 py-3.5 text-sm font-semibold tracking-[0.14em] text-[#F5F5F5]/82 uppercase shadow-sm shadow-black/20 transition-all duration-300 hover:border-white/40 hover:bg-[#1A1A1A] hover:text-[#F5F5F5] active:scale-[0.99]" onClick={() => setMobileMenuOpen(false)}><span>{link.label}</span><ChevronRight size={17} className="text-white/60 transition-transform group-hover:translate-x-0.5 group-hover:text-white" /></a>))}
-              <a href="#contatti" className="rounded-full border-2 border-white px-6 py-2 font-semibold text-white transition-all hover:bg-white hover:text-[#0F0F0F]" onClick={() => setMobileMenuOpen(false)}>Iscriviti Ora</a>
+              <a href="#contact" className="rounded-full border-2 border-white px-6 py-2 font-semibold text-white transition-all hover:bg-white hover:text-[#0F0F0F]" onClick={() => setMobileMenuOpen(false)}>Book Now</a>
             </div>
           </div>
         </div>

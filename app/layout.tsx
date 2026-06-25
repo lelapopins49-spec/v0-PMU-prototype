@@ -27,9 +27,9 @@ const dancingScript = Dancing_Script({
 
 const siteUrl = 'https://v0-centro-danza-prototype.vercel.app'
 const siteName = brand.name
-const siteTitle = 'Centro Danza | Scuola di Danza'
+const siteTitle = '[BRAND NAME] | Permanent Makeup Studio'
 const siteDescription =
-  'Centro Danza e una scuola di danza di Marco Protano e Martina Libro, con percorsi per bambini, ragazzi e adulti in un ambiente professionale e stimolante.'
+  '[BRAND NAME] is a permanent makeup studio in [CITY, STATE] offering microblading, lip blush, and permanent eyeliner. Book your free consultation today.'
 const ogImage = `${siteUrl}/centro%20danza/og1.jpg`
 
 export const metadata: Metadata = {
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    'Centro Danza',
-    'scuola di danza Napoli',
-    'danza classica Napoli',
-    'danza moderna Napoli',
-    'danza contemporanea Napoli',
-    'pilates Napoli',
-    'Napoli',
+    '[BRAND NAME]',
+    'permanent makeup',
+    'microblading',
+    'lip blush',
+    'permanent eyeliner',
+    'PMU studio',
+    '[CITY, STATE]',
   ],
   authors: [{ name: siteName }],
   creator: siteName,
@@ -67,12 +67,12 @@ export const metadata: Metadata = {
         secureUrl: ogImage,
         width: 1200,
         height: 630,
-        alt: 'Centro Danza - Scuola di Danza',
+        alt: '[BRAND NAME] - Permanent Makeup Studio',
         type: 'image/jpeg',
       },
     ],
-    locale: 'it_IT',
-    countryName: 'Italia',
+    locale: 'en_US',
+    countryName: 'United States',
   },
   twitter: {
     card: 'summary_large_image',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage,
-        alt: 'Centro Danza - Scuola di Danza',
+        alt: '[BRAND NAME] - Permanent Makeup Studio',
       },
     ],
   },
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  category: 'dance academy',
+  category: 'permanent makeup studio',
   other: {
     'og:image:secure_url': ogImage,
     'og:image:width': '1200',
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#C0152A',
+  themeColor: '#9B4A5E',
   width: 'device-width',
   initialScale: 1,
 }
@@ -123,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="it" className={`${inter.variable} ${cormorant.variable} ${dancingScript.variable}`}>
+    <html lang="en" className={`${inter.variable} ${cormorant.variable} ${dancingScript.variable} bg-background`}>
       <body className="font-sans antialiased" suppressHydrationWarning={true}>
         {children}
         <Analytics />

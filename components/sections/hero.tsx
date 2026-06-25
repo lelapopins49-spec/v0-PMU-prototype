@@ -55,23 +55,20 @@ export function HeroSection() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-[34rem] text-left">
             <div className="animate-clip-reveal mb-6 inline-flex items-center rounded-full border border-[#F5F5F5]/20 bg-white/5 px-4 py-2 text-xs font-semibold tracking-[0.24em] text-[#F5F5F5]/85 uppercase" style={{ animationDelay: "0.05s" }}>
-              DI MARCO PROTANO E MARTINA LIBRO
+              PERMANENT MAKEUP STUDIO
             </div>
             <h1 className="mb-6 text-left font-serif text-4xl leading-[1.02] font-bold text-balance text-[#F5F5F5] italic sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]">
-              <span className="animate-clip-reveal inline-block">Dove passione, tecnica ed espressione si incontrano.</span>
+              <span className="animate-clip-reveal inline-block">Wake Up to Effortless Beauty</span>
             </h1>
             <p className="animate-clip-reveal mb-10 max-w-none text-lg leading-relaxed font-light text-pretty text-[#B8B8B8] sm:text-xl lg:max-w-xl lg:text-2xl" style={{ animationDelay: "0.55s" }}>
-              Un percorso dedicato a bambini, ragazzi e adulti che desiderano crescere attraverso la danza in un ambiente professionale, accogliente e stimolante.
-            </p>
-            <p className="animate-clip-reveal mb-10 max-w-none text-sm leading-relaxed font-medium tracking-[0.08em] text-[#F5F5F5] uppercase sm:text-base lg:max-w-xl" style={{ animationDelay: "0.68s" }}>
-              LEZIONI DI PROVA DISPONIBILI SU PRENOTAZIONE.
+              Natural-looking permanent makeup by a certified artist in [CITY, STATE]. Results that last — so your mornings don&apos;t have to.
             </p>
             <div className="animate-clip-reveal flex flex-col justify-start gap-4 sm:flex-row" style={{ animationDelay: "0.7s" }}>
-              <a href="#corsi" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F5F5]/60 bg-transparent px-8 py-4 text-lg font-semibold text-[#F5F5F5] shadow-sm transition-colors hover:bg-[#FFFFFF]/10">
-                Scopri i Corsi <ChevronRight size={20} />
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F5F5]/60 bg-transparent px-8 py-4 text-lg font-semibold text-[#F5F5F5] shadow-sm transition-colors hover:bg-[#FFFFFF]/10">
+                Book a Free Consultation <ChevronRight size={20} />
               </a>
-              <a href="#contatti" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F5F5]/60 bg-card/70 px-8 py-4 text-lg font-semibold text-[#F5F5F5] shadow-sm transition-colors hover:bg-[#FFFFFF]/10">
-                Prenota una Prova <ChevronRight size={20} />
+              <a href="#gallery" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F5F5]/60 bg-card/70 px-8 py-4 text-lg font-semibold text-[#F5F5F5] shadow-sm transition-colors hover:bg-[#FFFFFF]/10">
+                See Our Work <ChevronRight size={20} />
               </a>
             </div>
           </div>
